@@ -9,3 +9,5 @@
 - once the player clicks on the question, they see the answer
 - After the user sees the question, the questions no longer clickable 
 
+- [ ] Refactor app.js to be in a Board.js component with React-Router
+- [ ] Create our question page component
