@@ -1,38 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+import Category from './Components/Category';
+import data from './Data/data.json';
+
 
 class App extends Component {
   render() {
+    console.log(data)
     return (
       <div className="App">
-        <section className="category">
-          <header>Category 1</header>
-          <section className="question">Question 1</section>
-          <section className="question">Question 2</section>
-          <section className="question">Question 3</section>
-          <section className="question">Question 4</section>
-        </section>
-        <section className="category">
-          <header>Category 2</header>
-          <section className="question">Question 1</section>
-          <section className="question">Question 2</section>
-          <section className="question">Question 3</section>
-          <section className="question">Question 4</section>
-        </section>
-        <section className="category">
-          <header>Category 3</header>
-          <section className="question">Question 1</section>
-          <section className="question">Question 2</section>
-          <section className="question">Question 3</section>
-          <section className="question">Question 4</section>
-        </section>
-        <section className="category">
-          <header>Category 4</header>
-          <section className="question">Question 1</section>
-          <section className="question">Question 2</section>
-          <section className="question">Question 3</section>
-          <section className="question">Question 4</section>
-        </section>
+      {data.map((cat, i) => {
+        return (
+          <Category key={i} name={cat.category}/>
+          
+        )
+      })}
       </div>
     );
   }
