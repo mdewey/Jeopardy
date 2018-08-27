@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import Question from "./Question";
 
 class Category extends Component {
   render() {
+    console.log(this.props);
     return (
       <section className="category">
         <header>{this.props.name}</header>
-        <section className="question">Question 1</section>
-        <section className="question">Question 2</section>
-        <section className="question">Question 3</section>
-        <section className="question">Question 4</section>
+        {this.props.questions.map((question, i) => {
+          return (
+            <Question
+              key={i}
+              points={question.points}
+              question={question.question}
+              answer={question.answer}
+            />
+          );
+        })}
       </section>
     );
   }

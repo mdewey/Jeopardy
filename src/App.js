@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
       {data.map((cat, i) => {
         return (
-          <Category key={i} name={cat.category}/>
+          <Category key={i} name={cat.category} questions={cat.questions}/>
           
         )
       })}
