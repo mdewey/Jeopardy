@@ -1,0 +1,17 @@
+.App {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5em 1em;
+    height: 100%;
+  }
+
+  .category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .category .question {
+    height: 23%;
+  }

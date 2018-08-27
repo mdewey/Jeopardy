@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import './App.css';
-import Category from './Components/Category';
-import data from './Data/data.json';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Board from './Components/Board'
+import "./Styles/App.css";
 
 
 class App extends Component {
   render() {
-    console.log(data)
     return (
-      <div className="App">
-      {data.map((cat, i) => {
-        return (
-          <Category key={i} name={cat.category} questions={cat.questions}/>
-          
-        )
-      })}
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Board}/>
+        </Switch>
+      </Router>
     );
   }
 }
