@@ -1,6 +1,16 @@
+*{
+  border:1px dotted green
+}
+
+
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5em 1em;
+  height: 100%;
 }
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -25,4 +35,15 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+.category{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category .questions {
+  height: 23%;
 }
